@@ -1,5 +1,11 @@
 /* Juego de preguntas (opciones) - Botanical-online.com - (c) 2016, Daniel Martínez Bou - all rights reserved */
-juego.theGame=function(a){this.game=a;this._q=[];this._ae=this._c=this._m=this._ah=this._o=this._e=this._h=this._ag=this._af=this._a=null;this._p=!1;this._i=0};juego._g=function(a,c,b,d,h){function e(a,c,b,d,f,g){d%2&&" "!=b[d]&&g.play();c.text+=b[d];d++;d<b.length&&a.time.events.add(f,e,this,a,c,b,d,f,g)}b=b.split("");e(a,c,b,0,d,h);return a.add.tween(this).to({},b.length*d,"Linear",!0)};juego._ac=function(a){for(var c=0,b=0;b<a.length;b++)null!=a[b]&&c++;return c};
+juego.theGame=function(a){
+  this.game=a;
+  this._q=[];
+  this._ae=this._c=this._m=this._ah=this._o=this._e=this._h=this._ag=this._af=this._a=null;
+  this._p=!1;
+  this._i=0};
+  juego._g=function(a,c,b,d,h){function e(a,c,b,d,f,g){d%2&&" "!=b[d]&&g.play();c.text+=b[d];d++;d<b.length&&a.time.events.add(f,e,this,a,c,b,d,f,g)}b=b.split("");e(a,c,b,0,d,h);return a.add.tween(this).to({},b.length*d,"Linear",!0)};juego._ac=function(a){for(var c=0,b=0;b<a.length;b++)null!=a[b]&&c++;return c};
 juego._b=function(a,c,b){a.time.events.add(c,function(){a.add.audio(b).play()},this)};
 juego.theGame.prototype={init:function(){this._i=juego.ACIERTOS=0;this._p=!1;this._ad(this.game.global.PREGUNTAS)},create:function(){new juego.botonResize(this.game);new juego.botonMusica(this.game);var a=this.game.add.button(10,this.game.height-10,"boton_restart",this._aa,this,2,0,1);a.anchor.setTo(0,1);var c=this.game.add.graphics(0,0);c.beginFill(2777642);c.drawRect(this.game.world.width-420-10,10,420,this.game.height-20);c.endFill();this._ae=this.game.add.button(10,a.y-a.height/2,"boton_help",
 this._ab,this,2,0,1);this._ae.anchor.setTo(0,.5);this._ae.y-=this._ae.height+10;this._af=null;this._s()},update:function(){},_ad:function(a){for(var c=[],b=0;b<a.length;b++)c.push(b);c=Phaser.ArrayUtils.shuffle(c);this._h=[];for(var d=0;d<c.length;d++)b=c[d],this._h.push(a[b])},_ab:function(){if(null==this._af&&!(3>juego._ac(this._q))){var a,c;do c=this.game.rnd.integerInRange(0,this._q.length-1),a=this._q[c];while(null==a||a._r==this._o);this.game.add.audio("ayuda").play();this._af=this.game.add.tween(a.boton).to({x:a.boton.x-
