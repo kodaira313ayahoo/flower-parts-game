@@ -12,7 +12,10 @@ juego.preload.prototype={
     b.x-=a.width/2;
     this.load.setPreloadSprite(b);
     //var baseUrl = '/scu-canvas/';
-    var baseUrl = 'https://flash-chat2-takeshininnin.web.app/';
+    //var baseUrl = 'https://flash-chat2-takeshininnin.web.app/';
+    var baseUrl = 'https://kodaira313ayahoo.github.io/flower-parts-game/';
+    
+    
     this.game.load.image("logo", baseUrl + "app/assets/logo_botanical.png");
     this.game.load.spritesheet("boton", baseUrl + "app/assets/boton.png",214,62);
     this.game.load.spritesheet("boton_restart", baseUrl + "app/assets/boton-restart.png",72,62);

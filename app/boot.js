@@ -16,7 +16,8 @@ juego.boot.prototype={init:function(){var a=localStorage.getItem("sonido");a&&(j
 //    this.game.load.image("carga_fondo","/app/assets/carga_fondo.png")},
 
     //var baseUrl = '/scu-canvas/';
-    var baseUrl = 'https://flash-chat2-takeshininnin.web.app/';
+    //var baseUrl = 'https://flash-chat2-takeshininnin.web.app/';
+    var baseUrl = 'https://kodaira313ayahoo.github.io/flower-parts-game/';
     this.game.load.image("carga_barra", baseUrl + "app/assets/carga_barra.png");
     this.game.load.image("carga_fondo", baseUrl + "app/assets/carga_fondo.png")},
   create:function(){
